@@ -1,7 +1,7 @@
 import { createPost, updatePost, deletePostById, findAllPosts, findPostByAuthor } from "../services/posts";
 import { Request, Response } from "express"
 
-class blogController {
+class postsController {
     createBlogPost = async (req:Request, res:Response) => {
         try {
           createPost(req.body);
@@ -50,4 +50,4 @@ class blogController {
         res.status(200).send(response);
       };
     }
-    export default new blogController();
+    export default new postsController();
